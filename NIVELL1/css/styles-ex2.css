@@ -133,15 +133,8 @@ footer {
 }
 
 
-@media all and (max-width: 1220px) {
-    .container {
-        width: 97vw;
-    }
-}
-
-
 /* tablet */
-@media all and (max-width: 992px) {
+@media all and (max-width: 1024px) {
     .container {
         width: 100%;
     }
@@ -156,8 +149,8 @@ footer {
     }
 }
 
-/* tablet */
-@media all and (max-width: 768px) {
+/* MOVILES */
+@media all and (max-width: 767px) {
     main {
         flex-flow: column;
     }
