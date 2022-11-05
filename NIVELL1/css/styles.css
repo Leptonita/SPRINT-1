@@ -13,8 +13,8 @@ body {
 .container {
     display: flex;
     flex-flow: column wrap;
-    max-width: 1200px;   
-     margin:auto;
+    max-width: 1200px;
+    margin: auto;
 }
 
 header {
@@ -25,7 +25,8 @@ header {
     justify-content: center;
     align-items: space-between;
     border: 12px solid black;
-    gap: 7px;
+     gap: 7px; /**/
+
 }
 
 #fila1 {
@@ -36,6 +37,7 @@ header {
     width: 100%;
     background-color: rgb(78, 73, 73);
     height: 40px;
+    padding: 5px;
 }
 
 .item1,
@@ -57,35 +59,72 @@ header {
     background-color: rgb(255, 106, 0);
     width: 100%;
     height: 40px;
+    padding: 5px;
 }
 
 #fila2>.item4 {
-    flex: 1 80%;    
+    flex: 1 80%;
     background-color: rgb(255, 196, 0);
     margin: 10px;
 }
 
-/* */ 
+/* */
 main {
     margin: 10px 0;
     display: flex;
     background-color: black;
     width: 100%;
-    height: 33vh;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: space-between;
     border: 12px solid black;
     gap: 12px;
 }
 
-section {flex: 2; background-color: gray;}
-aside {flex: 1; background-color: rgb(255, 102, 0);}
+section {
+    flex: 2;
+    background-color: gray;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+section>div {
+    background-color: rgb(51, 98, 179);
+    margin: 10px 10px 0 10px;
+    gap: 5px;
+    flex-basis: calc(50% - 20px);
+    height: 20px;
+}
+/* section> :nth-child(1) {margin-top: 10px;} */
+
+section> :nth-child(5) {
+    background-color: rgb(183, 209, 255);
+    flex:2;
+    margin: 10px;
+}
+
+aside {
+    flex: 1;
+    background-color: rgb(255, 102, 0);
+    display: flex;
+    
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content:flex-start;
+    padding: 10px;
+}
+aside > div {
+    background-color: rgb(254, 249, 185);
+    margin: 0 10px;
+    flex: 1 1 100%;
+    height: 20px;
+}
+aside :nth-child(1) {margin-top: 5px;}
+aside :nth-child(2) {margin-top: 10px;}
 
 footer {
     margin-top: 10px;
     background-color: rgb(255, 196, 0);
-    width: 100%; 
+    width: 100%;
     height: 40px;
     align-items: space-between;
     border: 12px solid black;
