@@ -92,7 +92,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgba(244, 148, 147, 0.9);
+    color: rgba(250, 132, 130, 0.8);
     /* text-shadow: 0px 1px rgba(100, 0, 0, 0.5); */
     background-color: rgba(192, 192, 192, 0.4);
     text-align: center;
@@ -103,74 +103,96 @@ a:hover {
 main {
     margin: 10px 0;
     display: flex;
-    background-color: black;
+    background-color: white;
     width: 100%;
-    border: 12px solid black;
+    /* border: 12px solid black; */
     gap: 12px;
 }
 
 section {
-    flex: 2;
-    background-color: gray;
+    flex: 3;
+    background-color: #dedede;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     padding: 5px;
 }
 
-section>div {
-    background-color: rgb(51, 98, 179);
+section > article {
+    background-color: rgb(240, 240, 240);
     margin: 10px 10px 0 10px;
     gap: 5px;
     flex-basis: calc(50% - 20px);
-    height: 20px;
 }
 
 section> :nth-child(5) {
-    background-color: rgb(183, 209, 255);
     flex: 2;
     margin: 10px;
 }
+.imgArt img {height: 11em;
+    object-fit: cover;}
+.fecha {margin-top:-2em;
+    padding: 0 0 0.8em 10px;
+
+color: yellow;
+}
+h3 { background-color: #f18180;
+    font-family: 'Noto Sans Limbu', sans-serif;
+    letter-spacing: 0.19rem;
+    font-size: 1.5rem;
+color: white;
+padding: 10px;
+margin-top: 0;
+}
+
+.txt-resum { display: flex;}
+.col-izq { flex: 1; padding: 10px;}
+.col-dere { flex: 1; padding: 10px;}
+.leerMas { padding: 10px;}
 
 aside {
     flex: 1;
-    background-color: rgb(255, 102, 0);
+    background-color: #dedede;
     display: flex;
 
     flex-flow: row wrap;
-    justify-content: stretch;
+    justify-content: center;
     align-content: flex-start;
     padding: 5px;
 }
 
 aside>div {
-    background-color: rgb(254, 249, 185);
-    margin: 10px 10px 0 10px;
+    margin: 2rem 10px 0 10px;
     flex: 1 1 100%;
-    height: 20px;
+    /* height: 20px; */
+    text-align: center;
 }
 
 
 footer {
     margin-top: 0px;
-    background-color: rgb(255, 196, 0);
+    background-color: #dedede;
     width: 100%;
-    height: 40px;
-    align-items: space-between;
-    border: 12px solid black;
+    display: flex;
+    justify-content: center;  
+     
+}
+copyright {
+    background-color: rgb(240, 240, 240);
+    width: 95%;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
 }
 
 
 /* tablet */
 @media all and (max-width: 1024px) {
-    .container {
-        width: 100%;
-    }
-
+    
     main {
         flex-flow: column;
-        border: 12px solid rgb(255, 247, 24);
-        background-color: rgb(255, 247, 24);
+        /* border: 12px solid rgb(255, 247, 24);
+        background-color: rgb(255, 247, 24); */
     }
 
     aside :nth-child(2) {
@@ -180,6 +202,7 @@ footer {
 
 /* MOVILES */
 @media all and (max-width: 767px) {
+    
     header {
         flex-flow: column;
     }
@@ -188,31 +211,23 @@ footer {
         flex-flow: column wrap;
         height: 100%;
     }
+    .social {justify-content: flex-end;
+    align-items: flex-start;
+    margin-top: 0;}
 
     .item1,
     .item2,
     .item3 {
         flex: 1;
         width: calc(100% - 20px);
-        height: 17px
     }
 
     section {
         flex-flow: column;
-        background-color: rgb(2, 82, 99);
-    }
-
-    section>div {
-        background-color: rgb(102, 156, 164);
-    }
-
-    section> :nth-child(5) {
-        background-color: rgb(151, 212, 197);
-    }
+     }
 
     aside>div {
         flex: 1 80%;
-        background-color: rgb(255, 171, 100);
     }
 
 }
