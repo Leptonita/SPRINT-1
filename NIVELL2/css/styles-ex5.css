@@ -17,10 +17,11 @@ body {
     margin: auto;
 }
 
+/* CABECERA HEADER */
 header {
     display: flex;
     background: url("../images/header.jpg") #eee;
-    background-size: 140%;
+    background-size: 143%;
     background-repeat: no-repeat;
     background-position: center 50%;
     /* width: 100%;*/
@@ -32,21 +33,27 @@ header {
 
 #fila1 {
     display: flex;
-/*     justify-content: space-evenly; */
     align-items: center;
     width: 100%;
-    /* padding: 5px; */
 }
 
-.item1,
+.logo,
 .item3 {
     flex: 1px;
-   /* margin: 10px;  */
+}
+.logo { display: flex;
+justify-content: center;
+align-items: flex-start;
 }
 
-.item1 img {
+.logo img {
     width: 5em;
-    margin-left: 30px;
+    /*margin-left: 30px; */
+    opacity: 0.95;
+}   
+
+.logo img:hover {
+   opacity: 1;
 }
 
 .item2 {
@@ -82,13 +89,12 @@ a:hover {
     justify-content: center;
     align-items: flex-end;
     width: 85%;
-    /* */
     height: 200px;
 }
 
 .item4 {
     flex: 1;
-    height: 4.5em;
+    height: 4.6em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,12 +106,12 @@ a:hover {
     font-size: 1.5rem;
 }
 
+/* ARTICULOS Y LATERAL */
 main {
     margin: 10px 0;
     display: flex;
     background-color: white;
     width: 100%;
-    /* border: 12px solid black; */
     gap: 12px;
 }
 
@@ -128,16 +134,19 @@ section > article {
 section> :nth-child(5) {
     flex: 2;
     margin: 20px;
+    text-align: center;
 }
 
 .imgArt img {height: 11em;
     object-fit: cover;
 }
 
-.fecha {margin-top:-2em;
+.fecha {
+    margin-top: -2em;
     padding: 0 0 0.8em 10px;
     color: yellow;
 }
+
 h3 { background-color: #f18180;
     font-family: 'Noto Sans Limbu', sans-serif;
     letter-spacing: 0.19rem;
@@ -148,9 +157,10 @@ h3 { background-color: #f18180;
 }
 
 .txt-resum { display: flex;}
+.cols { column-count: 2; padding: 0 10px;}
 .col-izq { flex: 1; padding: 10px;}
 .col-dere { flex: 1; padding: 10px;}
-.leerMas { padding: 10px;}
+.leerMas { padding: 25px 0 10px 10px;}
 
 aside {
     flex: 1;
@@ -168,15 +178,17 @@ aside>div {
     text-align: center;
 }
 
+/* FOOTER */
 
 footer {
     margin-top: 0px;
+    margin-bottom: 10px;
     background-color: #dedede;
     width: 100%;
     display: flex;
-    justify-content: center;    
+    justify-content: center;  
+    animation: subir 1s ease-in-out;  
 }
-
 copyright {
     background-color: rgb(240, 240, 240);
     width: 95%;
@@ -215,7 +227,7 @@ copyright {
     align-items: flex-start;
     margin-top: 0;}
 
-    .item1,
+    .logo,
     .item2,
     .item3 {
         flex: 1;
@@ -229,4 +241,5 @@ copyright {
     aside>div {
         flex: 1 80%;
     }
+
 }
